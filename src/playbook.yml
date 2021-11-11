@@ -37,7 +37,8 @@
       - discord
       - teamviewer
       - google-chrome
-      
+      - nextcloud
+
   tasks:
     - name: Return motd to registered var
       shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && chsh -s $(which zsh) && source ~/.zshrc
