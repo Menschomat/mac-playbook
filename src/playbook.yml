@@ -1,0 +1,71 @@
+---
+- name: Install stuff from AppStore and brew
+  hosts: localhost
+  vars:
+    mas_installed_apps:
+      #Misc
+      - { id: 1352778147, name: "Bitwarden" }
+      - { id: 1274495053, name: "Microsoft To Do" }
+      #Office
+      - { id: 462054704, name: "Microsoft Word" }
+      - { id: 462058435, name: "Microsoft Excel" }
+      - { id: 784801555, name: "Microsoft OneNote" }
+      - { id: 462062816, name: "Microsoft PowerPoint" }
+
+    homebrew_installed_packages:
+      - zsh
+      - git
+      - wget
+      - maven
+      - nmap
+      - htop
+      - node@14
+      - python@3.9
+
+    homebrew_taps:
+      - AdoptOpenJDK/openjdk
+
+    homebrew_cask_apps:
+      - iterm2
+      - pycharm
+      - intellij-idea
+      - spotify
+      - docker
+      - github
+      - adobe-creative-cloud
+      - adoptopenjdk11
+      - discord
+      - teamviewer
+      - google-chrome
+      
+  tasks:
+    - name: Return motd to registered var
+      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && chsh -s $(which zsh) && source ~/.zshrc
+      register: command_result
+      failed_when: "'FAILED' in command_result.stderr"
+
+    - name: "zshrc-brew"
+      lineinfile:
+        path: ~/.zshrc
+        line: "export PATH=/opt/homebrew/bin:$PATH"
+
+    - name: "zshrc-python3"
+      lineinfile:
+        path: ~/.zshrc
+        line: "export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
+
+    - name: Install Angular-CLI
+      community.general.npm:
+        name: "@angular/cli"
+        global: yes
+        state: present
+        
+    - name: Install http-server
+      community.general.npm:
+        name: "http-server"
+        global: yes
+        state: present
+
+  roles:
+    - geerlingguy.mac.homebrew
+    - geerlingguy.mac.mas
