@@ -11,7 +11,8 @@
       - { id: 462058435, name: "Microsoft Excel" }
       - { id: 784801555, name: "Microsoft OneNote" }
       - { id: 462062816, name: "Microsoft PowerPoint" }
-
+    mas_upgrade_all_apps: true
+    
     homebrew_installed_packages:
       - zsh
       - git
