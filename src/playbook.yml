@@ -68,6 +68,12 @@
         name: "@angular/cli"
         global: yes
         state: present
+
+    - name: Install Vue-CLI
+      community.general.npm:
+        name: "@vue/cli"
+        global: yes
+        state: present
         
     - name: Install http-server
       community.general.npm:
