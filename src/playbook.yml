@@ -24,6 +24,7 @@
       - htop
       - node@14
       - python@3.9
+      - terraform
 
     homebrew_taps:
       - AdoptOpenJDK/openjdk
