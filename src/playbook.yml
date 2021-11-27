@@ -26,6 +26,7 @@
       - node@14
       - python@3.9
       - terraform
+      - gradle
 
     homebrew_taps:
       - AdoptOpenJDK/openjdk
@@ -50,6 +51,7 @@
       - teamviewer
       - google-chrome
       - nextcloud
+      - robo-3t
 
   tasks:
     - name: Return motd to registered var
