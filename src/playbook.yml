@@ -52,6 +52,7 @@
       - google-chrome
       - nextcloud
       - robo-3t
+      - ultimaker-cura
 
   tasks:
     - name: Return motd to registered var
