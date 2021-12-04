@@ -27,6 +27,7 @@
       - python@3.9
       - terraform
       - gradle
+      - go
 
     homebrew_taps:
       - AdoptOpenJDK/openjdk
@@ -53,6 +54,7 @@
       - nextcloud
       - robo-3t
       - ultimaker-cura
+      - hyper
 
   tasks:
     - name: Return motd to registered var
@@ -69,7 +71,14 @@
       lineinfile:
         path: ~/.zshrc
         line: "export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
-
+    - name: "zshrc-gopath"
+      lineinfile:
+        path: ~/.zshrc
+        line: "export GOPATH=$HOME/go"
+    - name: "zshrc-goinpath"
+      lineinfile:
+        path: ~/.zshrc
+        line: "export PATH=$GOPATH/bin:$PATH"
     - name: Install Angular-CLI
       community.general.npm:
         name: "@angular/cli"
