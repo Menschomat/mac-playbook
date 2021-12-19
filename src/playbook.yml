@@ -55,6 +55,7 @@
       - robo-3t
       - ultimaker-cura
       - hyper
+      - teamspeak-client
 
   tasks:
     - name: Return motd to registered var
