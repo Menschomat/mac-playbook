@@ -56,6 +56,7 @@
       - ultimaker-cura
       - hyper
       - teamspeak-client
+      - nvidia-geforce-now
 
   tasks:
     - name: Return motd to registered var
