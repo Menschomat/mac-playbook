@@ -30,6 +30,7 @@
       - terraform
       - gradle
       - go
+      - poetry
 
     homebrew_taps:
       - AdoptOpenJDK/openjdk
@@ -43,10 +44,7 @@
       - font-meslo-lg-nerd-font
       - cyberduck
       - iterm2
-      - pycharm
-      - intellij-idea
       - spotify
-      - docker
       - github
       - adobe-creative-cloud
       - adoptopenjdk11
@@ -59,6 +57,13 @@
       - hyper
       - teamspeak-client
       - nvidia-geforce-now
+      - pycharm-ce
+      - intellij-idea-ce
+      - league-of-legends
+      - appcleaner
+    homebrew_cask_uninstalled_apps:
+      - pycharm
+      - intellij-idea
 
   tasks:
     - name: Return motd to registered var
