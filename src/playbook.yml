@@ -61,6 +61,7 @@
       - intellij-idea-ce
       - league-of-legends
       - appcleaner
+      - steam
     homebrew_cask_uninstalled_apps:
       - pycharm
       - intellij-idea
