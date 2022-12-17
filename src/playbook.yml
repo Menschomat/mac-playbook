@@ -62,6 +62,7 @@
       - league-of-legends
       - appcleaner
       - steam
+      - postman
     homebrew_cask_uninstalled_apps:
       - pycharm
       - intellij-idea
