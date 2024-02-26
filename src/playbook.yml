@@ -7,6 +7,7 @@
       - { id: 1352778147, name: "Bitwarden" }
       - { id: 1274495053, name: "Microsoft To Do" }
       - { id: 1475387142, name: "Tailscale" }
+      - { id: 1451685025, name: "WireGuard" }
       #Office
       - { id: 462054704, name: "Microsoft Word" }
       - { id: 462058435, name: "Microsoft Excel" }
@@ -25,8 +26,8 @@
       - maven
       - nmap
       - htop
-      - node@14
-      - python@3.9
+      - node@16
+      - python@3.11
       - terraform
       - gradle
       - go
@@ -37,35 +38,44 @@
       - homebrew/cask-fonts
 
     homebrew_cask_apps:
+      - temurin
       - font-hack-nerd-font
       - font-fira-code-nerd-font
       - font-fira-mono-nerd-font
       - font-caskaydia-cove-nerd-font
       - font-meslo-lg-nerd-font
       - cyberduck
-      - iterm2
       - spotify
       - github
       - adobe-creative-cloud
-      - adoptopenjdk11
       - discord
       - teamviewer
-      - google-chrome
       - nextcloud
       - robo-3t
       - ultimaker-cura
       - hyper
       - teamspeak-client
-      - nvidia-geforce-now
       - pycharm-ce
       - intellij-idea-ce
-      - league-of-legends
       - appcleaner
       - steam
-      - postman
+      - redisinsight
+      - mqtt-explorer
+      - arduino
+      - cyberghost-vpn
+      - brave-browser
     homebrew_cask_uninstalled_apps:
+      - adoptopenjdk17
+      - google-chrome
+      - league-of-legends
       - pycharm
       - intellij-idea
+      - nvidia-geforce-now
+      - jdownloader
+      - iterm2
+      - adoptopenjdk11
+      - postman
+      - protonvpn
 
   tasks:
     - name: Return motd to registered var
@@ -81,7 +91,7 @@
     - name: "zshrc-python3"
       lineinfile:
         path: ~/.zshrc
-        line: "export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
+        line: "export PATH=/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
     - name: "zshrc-gopath"
       lineinfile:
         path: ~/.zshrc
