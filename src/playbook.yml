@@ -18,6 +18,7 @@
     mas_upgrade_all_apps: true
 
     homebrew_upgrade_all_packages: true
+    homebrew_upgrade_all_cask: true
 
     homebrew_installed_packages:
       - zsh
