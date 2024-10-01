@@ -27,12 +27,11 @@
       - maven
       - nmap
       - htop
-      - node@16
-      - python@3.11
       - terraform
       - gradle
       - go
       - poetry
+      - kompose
 
     homebrew_taps:
       - AdoptOpenJDK/openjdk
@@ -66,6 +65,8 @@
       - cyberghost-vpn
       - brave-browser
     homebrew_cask_uninstalled_apps:
+      - node@16
+      - python@3.11
       - adoptopenjdk17
       - google-chrome
       - league-of-legends
