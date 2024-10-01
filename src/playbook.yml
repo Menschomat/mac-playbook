@@ -32,7 +32,8 @@
       - go
       - poetry
       - kompose
-
+      - nvm
+      - python@3.13
     homebrew_taps:
       - AdoptOpenJDK/openjdk
       - homebrew/cask-fonts
