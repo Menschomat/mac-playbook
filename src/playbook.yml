@@ -41,6 +41,7 @@
 
     homebrew_cask_apps:
       - temurin
+      - visual-studio-code
       - font-hack-nerd-font
       - font-fira-code-nerd-font
       - font-fira-mono-nerd-font
