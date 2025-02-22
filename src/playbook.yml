@@ -66,9 +66,9 @@
       - mqtt-explorer
       - arduino
       - cyberghost-vpn
-      - brave-browser
     homebrew_cask_uninstalled_apps:
       - node@16
+      - node@18
       - python@3.11
       - adoptopenjdk17
       - google-chrome
@@ -81,6 +81,7 @@
       - adoptopenjdk11
       - postman
       - protonvpn
+      - brave-browser
 
   tasks:
     - name: Return motd to registered var
