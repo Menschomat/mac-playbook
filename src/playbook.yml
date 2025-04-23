@@ -5,21 +5,13 @@
     mas_installed_apps:
       #Misc
       - { id: 1352778147, name: "Bitwarden" }
-      - { id: 1274495053, name: "Microsoft To Do" }
-      - { id: 1475387142, name: "Tailscale" }
-      - { id: 1451685025, name: "WireGuard" }
       #Office
       - { id: 462054704, name: "Microsoft Word" }
       - { id: 462058435, name: "Microsoft Excel" }
-      - { id: 784801555, name: "Microsoft OneNote" }
       - { id: 462062816, name: "Microsoft PowerPoint" }
-      - { id: 497799835, name: "Xcode" }
-
     mas_upgrade_all_apps: true
-
     homebrew_upgrade_all_packages: true
     homebrew_upgrade_all_cask: true
-
     homebrew_installed_packages:
       - zsh
       - git
@@ -33,55 +25,39 @@
       - poetry
       - kompose
       - nvm
-      - python@3.12
+      - python
+      - ansible
     homebrew_taps:
-      - AdoptOpenJDK/openjdk
       - homebrew/cask-fonts
       - hashicorp/tap
 
     homebrew_cask_apps:
-      - temurin
+      - temurin@21
       - visual-studio-code
       - font-hack-nerd-font
       - font-fira-code-nerd-font
       - font-fira-mono-nerd-font
       - font-caskaydia-cove-nerd-font
+      - font-meslo-for-powerline
       - font-meslo-lg-nerd-font
-      - cyberduck
       - spotify
-      - github
       - adobe-creative-cloud
-      - discord
-      - teamviewer
       - nextcloud
-      - robo-3t
       - ultimaker-cura
-      - hyper
-      - teamspeak-client
       - pycharm-ce
       - intellij-idea-ce
-      - appcleaner
-      - steam
       - redisinsight
       - mqtt-explorer
       - arduino
       - cyberghost-vpn
-    homebrew_cask_uninstalled_apps:
-      - node@16
-      - node@18
-      - python@3.11
-      - adoptopenjdk17
-      - google-chrome
-      - league-of-legends
-      - pycharm
-      - intellij-idea
-      - nvidia-geforce-now
-      - jdownloader
-      - iterm2
-      - adoptopenjdk11
-      - postman
-      - protonvpn
+      - pearcleaner
+      - wifiman
+      - tailscale
+      - orbstack
+      - obsidian
       - brave-browser
+    homebrew_cask_uninstalled_apps:
+      #- node@16
 
   tasks:
     - name: Return motd to registered var
@@ -94,10 +70,10 @@
         path: ~/.zshrc
         line: "export PATH=/opt/homebrew/bin:$PATH"
 
-    - name: "zshrc-python3"
-      lineinfile:
-        path: ~/.zshrc
-        line: "export PATH=/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
+    #- name: "zshrc-python3"
+    #  lineinfile:
+    #    path: ~/.zshrc
+    #    line: "export PATH=/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
     - name: "zshrc-gopath"
       lineinfile:
         path: ~/.zshrc
@@ -109,12 +85,6 @@
     - name: Install Angular-CLI
       community.general.npm:
         name: "@angular/cli"
-        global: yes
-        state: present
-
-    - name: Install Vue-CLI
-      community.general.npm:
-        name: "@vue/cli"
         global: yes
         state: present
 
