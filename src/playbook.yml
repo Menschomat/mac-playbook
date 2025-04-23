@@ -28,7 +28,6 @@
       - python
       - ansible
     homebrew_taps:
-      - homebrew/cask-fonts
       - hashicorp/tap
 
     homebrew_cask_apps:
@@ -48,7 +47,6 @@
       - intellij-idea-ce
       - redisinsight
       - mqtt-explorer
-      - arduino
       - cyberghost-vpn
       - pearcleaner
       - wifiman
@@ -56,7 +54,7 @@
       - orbstack
       - obsidian
       - brave-browser
-    homebrew_cask_uninstalled_apps:
+    #homebrew_cask_uninstalled_apps:
       #- node@16
 
   tasks:
