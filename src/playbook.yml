@@ -27,6 +27,7 @@
       - nvm
       - python
       - ansible
+      - helm
     homebrew_taps:
       - hashicorp/tap
 
